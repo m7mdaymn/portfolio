@@ -567,126 +567,135 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+<!-- Include Swiper's CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
+<div class="swiper init-swiper">
+  <script type="application/json" class="swiper-config">
+    {
+      "loop": true,
+      "speed": 600,
+      "autoplay": {
+        "delay": 5000
+      },
+      "slidesPerView": "auto",
+      "pagination": {
+        "el": ".swiper-pagination",
+        "type": "bullets",
+        "clickable": true
+      }
+    }
+  </script>
+  <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>From the first meeting, Mohamed demonstrated a deep understanding of our technical needs. He seamlessly integrated new features into our platform and ensured everything ran smoothly. His dedication and technical expertise make him a top-tier developer!</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3> David </h3>
-                      <h4>Ceo &amp; Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
+    <div class="swiper-slide">
+      <div class="testimonial-item">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>From the first meeting, Mohamed demonstrated a deep understanding of our technical needs. He seamlessly integrated new features into our platform and ensured everything ran smoothly. His dedication and technical expertise make him a top-tier developer!</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3> David </h3>
+              <h4>Ceo &amp; Founder</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>I needed a fast, secure, and user-friendly e-commerce platform, and Mohamed delivered beyond expectations. The site loads quickly, integrates perfectly with our database, and has an intuitive UI. Communication was great, and deadlines were always met. Will definitely work with him again!</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Sara</h3>
-                      <h4> E-commerce Business Owner</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Mohamed was instrumental in optimizing our existing web application. He refactored our backend services, improved API performance, and enhanced frontend responsiveness. His expertise in .NET and Angular made a significant impact on our system's efficiency.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Jana Karlis</h3>
-                      <h4>Project Manager at a Tech Firm</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Working with Mohamed was a game-changer for our startup. He quickly understood our needs, built a scalable .NET backend, and created a seamless Angular frontend. His problem-solving skills and attention to detail ensured a smooth development process. Highly recommended!</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3> Ahmed R. </h3>
-                      <h4>Startup Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-lg-2 text-center">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
+          </div>
         </div>
-
       </div>
+    </div><!-- End testimonial item -->
+
+    <div class="swiper-slide">
+      <div class="testimonial-item">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>I needed a fast, secure, and user-friendly e-commerce platform, and Mohamed delivered beyond expectations. The site loads quickly, integrates perfectly with our database, and has an intuitive UI. Communication was great, and deadlines were always met. Will definitely work with him again!</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3>Sara</h3>
+              <h4> E-commerce Business Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 text-center">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
+          </div>
+        </div>
+      </div>
+    </div><!-- End testimonial item -->
+
+    <div class="swiper-slide">
+      <div class="testimonial-item">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Mohamed was instrumental in optimizing our existing web application. He refactored our backend services, improved API performance, and enhanced frontend responsiveness. His expertise in .NET and Angular made a significant impact on our system's efficiency.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3>Jana Karlis</h3>
+              <h4>Project Manager at a Tech Firm</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 text-center">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
+          </div>
+        </div>
+      </div>
+    </div><!-- End testimonial item -->
+
+    <div class="swiper-slide">
+      <div class="testimonial-item">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Working with Mohamed was a game-changer for our startup. He quickly understood our needs, built a scalable .NET backend, and created a seamless Angular frontend. His problem-solving skills and attention to detail ensured a smooth development process. Highly recommended!</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3> Ahmed R. </h3>
+              <h4>Startup Founder</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 text-center">
+            <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="">
+          </div>
+        </div>
+      </div>
+    </div><!-- End testimonial item -->
+
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiperConfig = document.querySelector('.swiper-config');
+    const swiperParams = JSON.parse(swiperConfig.textContent);
+    const swiper = new Swiper('.init-swiper', swiperParams);
+  });
+</script>
 
     </section><!-- /Testimonials Section -->
 
