@@ -1542,4 +1542,24 @@ section,
 .contact-form button:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
-=
+/* Ensure the skills section uses light background */
+.skills.light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #45505b;
+  --contrast-color: #ffffff;
+}
+
+/* Enhance progress bar animation */
+.skills .progress-bar {
+  height: 10px;
+  transition: width 1.5s ease-in-out; /* Smooth animation */
+  background-color: var(--accent-color);
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+  overflow: hidden; /* Ensure the bar stays within bounds */
+}
