@@ -1,10 +1,10 @@
 /**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: MyResume
+ * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+ * Updated: Jun 29 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 (function() {
   "use strict";
@@ -225,5 +225,144 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Project Filter Functionality with Show More - SIMPLIFIED VERSION
+   */
+  function initProjectFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const allProjects = document.querySelectorAll('.project-item');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    
+    if (!filterButtons.length || !allProjects.length) return;
+    
+    // Track visible projects per filter
+    let currentFilter = '*';
+    let isExpanded = false;
+    
+    // Function to hide all projects except first 3
+    function hideAllProjectsExceptFirstThree() {
+      allProjects.forEach((project, index) => {
+        if (index >= 3) {
+          project.style.display = 'none';
+          project.style.opacity = '0';
+          project.style.transform = 'translateY(20px)';
+        }
+      });
+    }
+    
+    // Function to show/hide projects based on filter
+    function filterProjects(filter) {
+      currentFilter = filter;
+      isExpanded = false;
+      if (showMoreBtn) {
+        showMoreBtn.innerHTML = 'Show More Projects <i class="bi bi-arrow-down"></i>';
+      }
+      
+      let visibleCount = 0;
+      
+      allProjects.forEach(project => {
+        const isMatch = filter === '*' || project.classList.contains(filter.substring(1));
+        
+        if (isMatch) {
+          if (visibleCount < 3) {
+            // Show first 3 matching projects
+            project.style.display = 'block';
+            setTimeout(() => {
+              project.style.opacity = '1';
+              project.style.transform = 'translateY(0)';
+            }, 100);
+            visibleCount++;
+          } else {
+            // Hide other matching projects
+            project.style.display = 'none';
+            project.style.opacity = '0';
+            project.style.transform = 'translateY(20px)';
+          }
+        } else {
+          // Hide non-matching projects
+          project.style.display = 'none';
+          project.style.opacity = '0';
+          project.style.transform = 'translateY(20px)';
+        }
+      });
+      
+      // Show/hide Show More button
+      if (showMoreBtn) {
+        const matchingProjects = Array.from(allProjects).filter(project => 
+          filter === '*' || project.classList.contains(filter.substring(1))
+        );
+        
+        if (matchingProjects.length > 3) {
+          showMoreBtn.style.display = 'inline-block';
+        } else {
+          showMoreBtn.style.display = 'none';
+        }
+      }
+    }
+    
+    // Function to toggle show all/less
+    function toggleShowMore() {
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+        // Show all matching projects
+        allProjects.forEach(project => {
+          const isMatch = currentFilter === '*' || project.classList.contains(currentFilter.substring(1));
+          if (isMatch) {
+            project.style.display = 'block';
+            setTimeout(() => {
+              project.style.opacity = '1';
+              project.style.transform = 'translateY(0)';
+            }, 100);
+          }
+        });
+        showMoreBtn.innerHTML = 'Show Less <i class="bi bi-arrow-up"></i>';
+      } else {
+        // Show only first 3 matching projects
+        filterProjects(currentFilter);
+      }
+    }
+    
+    // Initially hide all projects except first 3
+    hideAllProjectsExceptFirstThree();
+    
+    // Initialize with all projects (first 3)
+    filterProjects('*');
+    
+    // Filter buttons click handler
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Filter projects
+        const filterValue = this.getAttribute('data-filter');
+        filterProjects(filterValue);
+      });
+    });
+    
+    // Show More button click handler
+    if (showMoreBtn) {
+      showMoreBtn.addEventListener('click', toggleShowMore);
+    }
+  }
+
+  // Initialize project filter when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Hide projects immediately
+    const allProjects = document.querySelectorAll('.project-item');
+    allProjects.forEach((project, index) => {
+      if (index >= 3) {
+        project.style.display = 'none';
+      }
+    });
+    
+    // Then initialize filter with small delay
+    setTimeout(initProjectFilter, 100);
+  });
 
 })();
